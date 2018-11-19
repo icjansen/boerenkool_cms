@@ -16,7 +16,7 @@
 
 	<nav class="turqoise navbar navbar-expand container-fluid">
 		<div class="container">
-			<a href="index.html" class="navbar-brand">
+			<a href="index.php" class="navbar-brand">
 				<img class="logo" src="images/logo2.png"/>
 
 				<div class="collapse navbar-collapse" id="navbar">
