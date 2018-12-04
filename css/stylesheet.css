@@ -367,9 +367,14 @@ h1{
 
 
 /* Project aanpassen */
-#modifydiv a{
+#divmodify a{
   height:50px;
   background-color:gray;
   border:1.5px solid black;
   margin-bottom: 10px;
+}
+
+#project_plaatje{
+  height:250px;
+  width:250px;
 }

@@ -18,7 +18,7 @@ $(function() {
 
 });
 
-$(function() {
+/*$(function() {
 
   // We can attach the `fileselect` event to all file inputs on the page
   $(document).on('change', ':file', function() {
@@ -44,4 +44,4 @@ $(function() {
       });
   });
   
-});
+});*/
