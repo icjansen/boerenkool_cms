@@ -20,7 +20,6 @@
   margin-top:1%;
 }
 
-
 /* BASIC */
 
 html {
@@ -137,12 +136,11 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=date], input[type=file] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -158,12 +156,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=date]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder, input[type=date]:placeholder {
   color: #cccccc;
 }
 
@@ -365,4 +363,13 @@ h1{
 
 #icon {
   width:30%;
+}
+
+
+/* Project aanpassen */
+#modifydiv a{
+  height:50px;
+  background-color:gray;
+  border:1.5px solid black;
+  margin-bottom: 10px;
 }

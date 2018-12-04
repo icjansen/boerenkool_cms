@@ -1,27 +1,27 @@
 <?php
-	if(isset($_POST['register_btn'])){
-		include 'db_connect.php';
-		session_start();
-		$first_name = $conn->real_escape_string($_POST['first_name']);
-		$last_name = $conn->real_escape_string($_POST['last_name']);
-		$username = $conn->real_escape_string($_POST['username']);
-		$email = $conn->real_escape_string($_POST['email']);
-		$password = $conn->real_escape_string($_POST['password']);		
-		$password_check = $conn->real_escape_string($_POST['password_check']);
 
-		if($password == $password_check){
-			//user created
-			$password = md5($password);
-			$sql = "INSERT INTO user (first_name, last_name,username,email,password,created) VALUES ('$first_name', '$last_name','$username','$email','$password',NOW())";
-			//echo $sql;
-			$conn->query( $sql );
-			$_SESSION['message'] = "You are now logged in";
-			$_SESSION['username'] = $username;
-			header("location: index.php");
-		}else{
-			//failed
-			$_SESSION['message'] = "The passwords do not match";
-		}
-	}
+if (isset($_POST['register_btn'])){
+	$first_name = trim($_REQUEST['first_name']);
+	$last_name = trim($_REQUEST['last_name']);
+	$username = trim($_REQUEST['username']);
+    $email = trim($_REQUEST['email']);
+    $pass1 = trim($_REQUEST['password']);
+    $pass2 = trim($_REQUEST['password_check']);
+
+    if (strcmp($pass1, $pass2 ) !== 0 || strlen ($pass1) == 0) {
+        die ("Wachtwoorden zijn niet gelijk");
+    };
+    $user = new User();
+    //var_dump($first_name, $last_name, $username, $email, $pass1, $pass2);
+    $result = $user->register($first_name, $last_name, $username, $email, $pass1, $pass2);
+    //var_dump($result);
+    if ($result === false ){
+        die ("Account aanmaken is niet gelukt");
+    } else {
+        echo '<h1 style="text-align: center; color: green;">Account aanmaken gelukt!</h1>';
+		$_SESSION['username'] = $username;
+		header("location: index.php");
+    }
+}
 
 ?>
