@@ -3,11 +3,11 @@ class Project{
 	public function __construct(){
 	}
 
-	public function add_project($project_name, $project_desc, $project_year, $student_name, $download_link, $course_name, $project_pic){
+	public function add_project($project_name, $project_desc, $project_year, $student_name, $download_link, $course_name, $project_pic, $type, $study){
 
 		$db = Database::getInstance();
 		$conn = $db->getConnection();
-		$sql = 'INSERT INTO project (project_name, project_description, project_year, student_name, download_link, course_name, project_thumbnail)
+		$sql = 'INSERT INTO project (project_name, project_description, project_year, student_name, download_link, course_name, project_thumbnail, type)
 			VALUES (
 			"'.$conn->real_escape_string($project_name).'",
 			"'.$conn->real_escape_string($project_desc).'",
@@ -15,7 +15,9 @@ class Project{
 			"'.$conn->real_escape_string($student_name).'",
 			"'.$conn->real_escape_string($download_link).'",
 			"'.$conn->real_escape_string($course_name).'",
-			"'.$conn->real_escape_string($project_pic).'"
+			"'.$conn->real_escape_string($project_pic).'",
+			"'.$conn->real_escape_string($type).'",
+			"'.$conn->real_escape_string($study).'"
 			)';
 
 		//echo $sql;
@@ -26,7 +28,7 @@ class Project{
 		return false;
 	}
 
-	public function modify_project($project_id,$project_name, $project_desc, $project_year, $student_name, $download_link, $course_name, $project_pic){
+	public function modify_project($project_id,$project_name, $project_desc, $project_year, $student_name, $download_link, $course_name, $project_pic, $type, $study){
 
 		$db = Database::getInstance();
 		$conn = $db->getConnection();
@@ -37,7 +39,9 @@ class Project{
 				student_name = "'.$conn->real_escape_string($student_name).'",
 				download_link = "'.$conn->real_escape_string($download_link).'",
 				course_name = "'.$conn->real_escape_string($course_name).'",
-				project_thumbnail = "'.$conn->real_escape_string($project_pic).'"
+				project_thumbnail = "'.$conn->real_escape_string($project_pic).'",
+				type = "'.$conn->real_escape_string($type).'",
+				study = "'.$conn->real_escape_string($study).'"
 				WHERE project_id = "'.$conn->real_escape_string($project_id).'"
 				';
 
@@ -55,6 +59,28 @@ class Project{
 		$conn = $db->getConnection();
 
 		$sql = 'SELECT * FROM course';
+
+		$result = $conn->query($sql);
+        return $result;
+	}
+
+	public function get_type(){
+		
+		$db = Database::getInstance();
+		$conn = $db->getConnection();
+
+		$sql = 'SELECT * FROM type';
+
+		$result = $conn->query($sql);
+        return $result;
+	}
+
+	public function get_study(){
+		
+		$db = Database::getInstance();
+		$conn = $db->getConnection();
+
+		$sql = 'SELECT * FROM study';
 
 		$result = $conn->query($sql);
         return $result;

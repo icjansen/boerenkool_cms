@@ -1,5 +1,8 @@
 <?php
+include 'includes/config.php';
 include 'includes/db_getcourse.php';
+include 'includes/db_gettype.php';
+include 'includes/db_getstudy.php';
 include 'includes/header.php';
 include 'includes/db_add_project.php';
 //var_dump($_SESSION['user']);
@@ -42,18 +45,45 @@ include 'includes/db_add_project.php';
 						<div class="form-group">
 							<input type="text" name="download_link" class="form-control" placeholder="Download link" value="" />
 						</div>
+            <!-- Course -->
 						<div class="form-group">
 							<input type="text" name="course_name" id="default" list="courses" placeholder="Course">
 							<datalist id="courses">
 								<?php
-								while($row=mysqli_fetch_array($result)){
+								while($row_course=mysqli_fetch_array($result_course)){
 									echo "<option value="
-									.$row['course_name'].">";
+									.$row_course['course_name'].">";
 								}
 								
 								?>
 							</datalist>
 						</div>
+            <!-- Type -->
+            <div class="form-group">
+              <input type="text" name="type" id="type" list="types" placeholder="Type">
+              <datalist id="types">
+                <?php
+                while($row_type=mysqli_fetch_array($result_type)){
+                  echo "<option value="
+                  .$row_type['type_name'].">";
+                }
+                
+                ?>
+              </datalist>
+            </div>
+            <!-- Study -->
+            <div class="form-group">
+              <input type="text" name="study" id="study" list="studies" placeholder="Study">
+              <datalist id="studies">
+                <?php
+                while($row_study=mysqli_fetch_array($result_study)){
+                  echo "<option value="
+                  .$row_study['study_name'].">";
+                }
+                
+                ?>
+              </datalist>
+            </div>
             <div class="form-group">
               <input type="file" name="project_pic" class="form-control-file" id="exampleFormControlFile1">
             </div>

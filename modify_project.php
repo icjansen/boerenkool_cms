@@ -1,4 +1,8 @@
 <?php
+include 'includes/config.php';
+include 'includes/db_getcourse.php';
+include 'includes/db_gettype.php';
+include 'includes/db_getstudy.php';
 include 'includes/header.php';
 include 'includes/db_modify_project.php';
 ?>
@@ -60,31 +64,66 @@ include 'includes/db_modify_project.php';
          class='form-control' value='"
          .$row['download_link']."' />
 
-         <input type='text' name='course_name'
-         class='form-control' value='"
-         .$row['course_name']."' />
+         <!-- Course -->
 
-         <p><img id='project_plaatje' class='project_pic' 
-         src='".$row['project_thumbnail']."' /></p>
-
-         <input type='file' name='fileToUpload'
-         class='form-control-file' value='"
-         .$row['project_thumbnail']."' />
-
-         <input type='submit' name='modify_btn'
-         class='btnContact' value='Submit' />
-
-         </div>
-         </div>
-         </form>
+         <input type='text' name='course_name' id='course' list='courses' value='"
+         .$row['course_name']."'>
+         <datalist id='courses'>
          ";
-       }	
-       ?>
+         while($row_course=mysqli_fetch_array($result_course)){
+           echo " <option value='" .$row_course['course_name']."'>" .$row_course['course_name']."</option>";
+         }
 
-     </div>
+         echo "
+         </datalist>
 
-   </div>
- </div>
+         <!-- Type -->
+
+         <input type='text' name='type' id='type' list='types' value='"
+         .$row['type_name']."'>
+         <datalist id='types'>
+         ";
+         while($row_type=mysqli_fetch_array($result_type)){
+          echo "<option value='" .$row_type['type_name']."'>" .$row_type['type_name']."</option>";
+        }
+
+        echo "
+        </datalist>
+
+        <!-- Study -->
+
+        <input type='text' name='study' id='study' list='studies' value='"
+        .$row['study_name']."'>
+        <datalist id='studies'>
+        ";
+        while($row_study=mysqli_fetch_array($result_study)){
+          echo "<option value='" .$row_study['study_name']."'>" .$row_study['study_name']."</option>";
+        }
+
+        echo "
+        </datalist>
+
+        <p><img id='project_plaatje' class='project_pic' 
+        src='".$row['project_thumbnail']."' /></p>
+
+        <input type='file' name='fileToUpload'
+        class='form-control-file' value='"
+        .$row['project_thumbnail']."' />
+
+        <input type='submit' name='modify_btn'
+        class='btnContact' value='Submit' />
+
+        </div>
+        </div>
+        </form>
+        ";
+      }	
+      ?>
+
+    </div>
+
+  </div>
+</div>
 </section>
 
 <?php

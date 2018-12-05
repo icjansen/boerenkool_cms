@@ -27,7 +27,7 @@ include 'includes/header.php';
           <h1> Dit is het CMS voor de open dag van MBO Aventus </h1>
           <img class="logo" src="images/aventus5.jpg"/>
           <br>
-          <h5> Dit betreft de opleidingen: Applicatie- en mediaontwikkelaar en gamedeveloper </h5>
+          <h5> Dit betreft de opleidingen: Applicatie- en mediaontwikkelaar en Gamedeveloper </h5>
 				</div>
 			</div>
 		</div>

@@ -22,10 +22,6 @@
 
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
@@ -377,4 +373,5 @@ h1{
 #project_plaatje{
   height:250px;
   width:250px;
+  margin-left:5px;
 }
