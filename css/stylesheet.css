@@ -22,13 +22,6 @@
 
 /* BASIC */
 
-<<<<<<< Updated upstream
-=======
-html {
-  background-color: #56baed;
-}
-
->>>>>>> Stashed changes
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
@@ -368,7 +361,6 @@ h1{
   width:30%;
 }
 
-<<<<<<< Updated upstream
 /* Login */
 #login{
   text-align: center;
@@ -376,22 +368,14 @@ h1{
 
 /* Project aanpassen */
 #divmodify a{
-=======
-
-/* Project aanpassen */
-#modifydiv a{
->>>>>>> Stashed changes
   height:50px;
   background-color:gray;
   border:1.5px solid black;
   margin-bottom: 10px;
-<<<<<<< Updated upstream
 }
 
 #project_plaatje{
   height:250px;
   width:250px;
   margin-left:5px;
-=======
->>>>>>> Stashed changes
 }

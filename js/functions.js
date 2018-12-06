@@ -18,7 +18,6 @@ $(function() {
 
 });
 
-<<<<<<< Updated upstream
 /*$(function() {
 =======
 $(function() {
@@ -48,8 +47,4 @@ $(function() {
       });
   });
   
-<<<<<<< Updated upstream
 });*/
-=======
-});
->>>>>>> Stashed changes
