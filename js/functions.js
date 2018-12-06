@@ -18,7 +18,11 @@ $(function() {
 
 });
 
+<<<<<<< Updated upstream
 /*$(function() {
+=======
+$(function() {
+>>>>>>> Stashed changes
 
   // We can attach the `fileselect` event to all file inputs on the page
   $(document).on('change', ':file', function() {
@@ -44,4 +48,8 @@ $(function() {
       });
   });
   
+<<<<<<< Updated upstream
 });*/
+=======
+});
+>>>>>>> Stashed changes

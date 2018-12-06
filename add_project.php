@@ -1,8 +1,12 @@
 <?php
+<<<<<<< Updated upstream
 include 'includes/config.php';
 include 'includes/db_getcourse.php';
 include 'includes/db_gettype.php';
 include 'includes/db_getstudy.php';
+=======
+include 'includes/db_getcourse.php';
+>>>>>>> Stashed changes
 include 'includes/header.php';
 include 'includes/db_add_project.php';
 //var_dump($_SESSION['user']);
@@ -11,7 +15,26 @@ include 'includes/db_add_project.php';
 <section id="main">
 	<div class="container">
 		<div class="row">
+<<<<<<< Updated upstream
 			<?php include 'includes/sidebar.php'; ?>
+=======
+			<div class="col-md-3">
+				<div class="list-group">
+					<a href="add_project.php" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						Project toevoegen
+					</a>
+					<a href="modify_project.php" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+						Project aanpassen
+					</a>
+					<a href="posts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+						Categorieën
+					</a>
+					<a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+						Gebruikers
+					</a>
+				</div>
+			</div>
+>>>>>>> Stashed changes
 			<div class="col-md-9">
 				<form method="post" action="">
 					<div class="col-md-9">
@@ -30,19 +53,29 @@ include 'includes/db_add_project.php';
 						<div class="form-group">
 							<input type="text" name="download_link" class="form-control" placeholder="Download link" value="" />
 						</div>
+<<<<<<< Updated upstream
             <!-- Course -->
+=======
+>>>>>>> Stashed changes
 						<div class="form-group">
 							<input type="text" name="course_name" id="default" list="courses" placeholder="Course">
 							<datalist id="courses">
 								<?php
+<<<<<<< Updated upstream
 								while($row_course=mysqli_fetch_array($result_course)){
 									echo "<option value="
 									.$row_course['course_name'].">";
+=======
+								while($row=mysqli_fetch_array($result)){
+									echo "<option value="
+									.$row['course_name'].">";
+>>>>>>> Stashed changes
 								}
 								
 								?>
 							</datalist>
 						</div>
+<<<<<<< Updated upstream
             <!-- Type -->
             <div class="form-group">
               <input type="text" name="type" id="type" list="types" placeholder="Type">
@@ -69,6 +102,8 @@ include 'includes/db_add_project.php';
                 ?>
               </datalist>
             </div>
+=======
+>>>>>>> Stashed changes
             <div class="form-group">
               <input type="file" name="project_pic" class="form-control-file" id="exampleFormControlFile1">
             </div>
