@@ -361,6 +361,10 @@ h1{
   width:30%;
 }
 
+/* Login */
+#login{
+  text-align: center;
+}
 
 /* Project aanpassen */
 #divmodify a{
