@@ -1,7 +1,7 @@
 <?php
 include 'includes/config.php';
 include 'includes/header.php';
-include 'includes/db_get_users.php';
+include 'includes/db_getusers.php';
 ?>
 
 <section id="main">
@@ -17,15 +17,15 @@ include 'includes/db_get_users.php';
           <input type='text' name='user_id'
           class='form-control' value='"
           .$row['user_id']."' readonly/>
-          
+
           <input type='text' name='user_id'
           class='form-control' value='"
           .$row['first_name']."' readonly/>
-          
+
           <input type='text' name='user_id'
           class='form-control' value='"
           .$row['last_name']."' readonly/>
-          
+
           <input type='text' name='user_id'
           class='form-control' value='"
           .$row['username']."' readonly/>

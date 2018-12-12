@@ -51,5 +51,16 @@ class User {
     public function isLoggedIn(){
         return isset ( $_SESSION['user']);
     }
+
+    public function get_users(){
+
+    $db = Database::getInstance();
+    $conn = $db->getConnection();
+
+    $sql = 'SELECT * FROM user';
+
+    $result = $conn->query($sql);
+    return $result;
+  }
 }
 ?>
