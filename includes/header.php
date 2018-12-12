@@ -7,7 +7,7 @@ session_start();
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title> CMS Open dag Aventus</title>
+	<title> CMS Open dag Aventus </title>
 	<!-- Own stylesheet ( via scss) -->
 	<link rel="stylesheet" href="css/stylesheet.css">
 	<!-- Bootstrap core CSS -->
@@ -21,7 +21,7 @@ session_start();
 	<nav class="turqoise navbar navbar-expand container-fluid">
 		<div class="container">
 			<a href="index.php" class="navbar-brand">
-				<img class="logo" src="images/logo2.png"/>
+				<img class="logo" src="images/logo2.png" alt="logo.xd"/></a>
 
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav mr-auto">

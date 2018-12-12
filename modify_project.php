@@ -25,34 +25,34 @@ include 'includes/db_modify_project.php';
 
          <div id='".$row['project_id']."' class='collapse'>
 
-         <input type='text' name='project_id'
+         <p><span class='input_span'>Project ID</span><input type='text' name='project_id'
          class='form-control' value='"
-         .$row['project_id']."' readonly/>
+         .$row['project_id']."' readonly/></p>
 
-         <input type='text' name='project_name'
+         <p><span class='input_span'>Project naam</span><input type='text' name='project_name'
          class='form-control' value='"
-         .$row['project_name']."' />
+         .$row['project_name']."' /></p>
 
-         <input type='text' name='project_desc'
+         <p><span class='input_span'>Project beschrijving</span><input type='text' name='project_desc'
          class='form-control' value='"
-         .$row['project_description']."' />
+         .$row['project_description']."' /></p>
 
-         <input type='date' name='project_year'
+         <p><span class='input_span'>Project jaar</span><input type='date' name='project_year'
          class='form-control' value='"
-         .$row['project_year']."' />
+         .$row['project_year']."' /></p>
 
-         <input type='text' name='student_name'
+         <p><span class='input_span'>Naam van student</span><input type='text' name='student_name'
          class='form-control' value='"
-         .$row['student_name']."' />
+         .$row['student_name']."' /></p>
 
-         <input type='text' name='download_link'
+         <p><span class='input_span'>Download link</span><input type='text' name='download_link'
          class='form-control' value='"
-         .$row['download_link']."' />
+         .$row['download_link']."' /></p>
 
          <!-- Course -->
 
-         <input type='text' name='course_name' id='course' list='courses' value='"
-         .$row['course_name']." (Remove if you want to edit)'>
+         <p><span class='input_span'>Vak</span><input type='text' name='course_name' id='course' list='courses' value='"
+         .$row['course_name']."'></p>
          <datalist id='courses'>
          ";
          while($row_course=mysqli_fetch_array($result_course)){
@@ -64,8 +64,8 @@ include 'includes/db_modify_project.php';
 
          <!-- Type -->
 
-         <input type='text' name='type' id='type' list='types' value='"
-         .$row['type']." (Remove if you want to edit)'>
+         <p><span class='input_span'>Type applicatie</span><input type='text' name='type' id='type' list='types' value='"
+         .$row['type']."'></p>
          <datalist id='types'>
          ";
          while($row_type=mysqli_fetch_array($result_type)){
@@ -77,8 +77,8 @@ include 'includes/db_modify_project.php';
 
         <!-- Study -->
 
-        <input type='text' name='study' id='study' list='studies' value='"
-        .$row['study']." (Remove if you want to edit)'>
+        <p><span class='input_span'>Studie</span><input type='text' name='study' id='study' list='studies' value='"
+        .$row['study']."'></p>
         <datalist id='studies'>
         ";
         while($row_study=mysqli_fetch_array($result_study)){
@@ -88,12 +88,15 @@ include 'includes/db_modify_project.php';
         echo "
         </datalist>
 
-        <p><img id='project_plaatje' class='project_pic' 
+        <p><span class='input_span'>Project thumbnail</span><img id='project_plaatje' class='project_pic' 
         src='".$row['project_thumbnail']."' /></p>
 
-        <input type='file' name='fileToUpload'
+        <p><span class='input_span'>Project thumbnail uploaden</span><input type='file' name='fileToUpload'
+        class='form-control-file'/></p>
+
+        <p><span class='input_span'>Slideshow plaatjes uploaden</span><input type='file' name='slideshow_pic'
         class='form-control-file' value='"
-        .$row['project_thumbnail']."' />
+        .$row['project_thumbnail']."' /></p>
 
         <input type='submit' name='modify_btn'
         class='btnContact' value='Submit' />

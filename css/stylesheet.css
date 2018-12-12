@@ -376,6 +376,13 @@ h1{
 
 #project_plaatje{
   height:250px;
-  width:250px;
+  width:473px;
   margin-left:5px;
+}
+
+.input_span{
+  margin-left: 5px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size:18px;
 }
