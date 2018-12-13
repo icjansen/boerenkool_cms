@@ -19,7 +19,7 @@ session_start();
 <body>
 
   <nav class="turqoise navbar navbar-expand-lg navbar-light" id="navbar">
-    <div class="container">
+    <div class="container" id="header_container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

@@ -396,3 +396,7 @@ h1{
   font-weight: bold;
   font-size:18px;
 }
+
+#header_container{
+  padding:0px;
+}
