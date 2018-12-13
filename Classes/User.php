@@ -39,6 +39,8 @@ class User {
         if( password_verify($password, $user_row['password'])) {
             $_SESSION['user'] = $user_row;
             $_SESSION['username'] = $user_row['username'];
+            $_SESSION['first_name'] = $user_row['first_name'];
+            $_SESSION['last_name'] = $user_row['last_name'];
             return true;
         }
         return false;

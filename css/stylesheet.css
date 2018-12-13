@@ -1,5 +1,5 @@
 .logo{
-    width:60%; /* you can use % */
+
     height: auto;
 }
 
@@ -10,6 +10,15 @@
 #navbar a{
   font-size:20px;
   color:black;
+}
+
+#navbar li{
+  margin-right:20px;
+}
+
+#logolink{
+  margin-right: 150px;
+  width:143.9px;
 }
 
 #main .col-md-3{

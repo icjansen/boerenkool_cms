@@ -21,20 +21,20 @@ session_start();
 
 	<nav class="turqoise navbar navbar-expand container-fluid" id="navbar">
 		<div class="container">
-			<a href="index.php" class="navbar-brand">
-				<img class="logo" src="images/logo2.png" alt="logo.xd"/></a>
+			<a href="index.php" class="navbar-brand" id="logolink">
+				<img class="logo img img-fluid" src="images/logo2.png" alt="logo.xd"/></a>
 
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav mr-auto">
 						<?php if(isset($_SESSION['user'])){?>
-						<a href="cms.php" class="nav-item active nav-link">CMS</a>
-						<a href="help.php" class="nav-item active nav-link">Help</a>
-						<a class="nav-item active nav-link" href="logout.php">
+						<li><a href="cms.php" class="nav-item active nav-link">CMS</a></li>
+						<li><a href="help.php" class="nav-item active nav-link">Help</a></li>
+						<li><a class="nav-item active nav-link" href="logout.php">
 							Logout
-						</a>
-						<a id="logout" class="nav item active nav-link"> 
-							Welkom, <?php echo $_SESSION['username'];?>
-						</a>
+						</a></li>
+						<li><a id="logout" class="nav item active nav-link"> 
+							Welkom, <?php echo $_SESSION['first_name'].' '.$_SESSION['last_name'];?>
+						</a></li>
 						<?php } ?>
 					</ul>
 
