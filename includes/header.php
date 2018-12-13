@@ -18,18 +18,17 @@ session_start();
 
 <body>
 
-	<nav class="turqoise navbar navbar-expand container-fluid">
+
+	<nav class="turqoise navbar navbar-expand container-fluid" id="navbar">
 		<div class="container">
 			<a href="index.php" class="navbar-brand">
 				<img class="logo" src="images/logo2.png" alt="logo.xd"/></a>
 
-				<div class="collapse navbar-collapse" id="navbar">
+				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav mr-auto">
 						<?php if(isset($_SESSION['user'])){?>
 						<a href="cms.php" class="nav-item active nav-link">CMS</a>
 						<a href="help.php" class="nav-item active nav-link">Help</a>
-            <?php } ?>
-						<?php if(isset($_SESSION['user'])){?>
 						<a class="nav-item active nav-link" href="logout.php">
 							Logout
 						</a>

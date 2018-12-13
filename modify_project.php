@@ -5,6 +5,9 @@ include 'includes/db_gettype.php';
 include 'includes/db_getstudy.php';
 include 'includes/header.php';
 include 'includes/db_modify_project.php';
+
+if(isset($_SESSION['user'])){
+
 ?>
 
 <section id="main">
@@ -114,6 +117,16 @@ include 'includes/db_modify_project.php';
 </div>
 </section>
 
+<?php } else {
+  //Als je niet bent ingelogd
+  include 'includes/footer.php';
+?>
+  <!-- niet ingelogd, dus H1 + JS redirect naar index-->
+  <h1> Je bent niet ingelogd! </h1>
+  <p> Je wordt over 3 seconden doorgestuurd naar de inlogpagina... </p>
+  <script src="js/redirects.js"></script>
+
 <?php
+}
 include 'includes/footer.php';
 ?>
