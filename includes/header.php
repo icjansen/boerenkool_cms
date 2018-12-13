@@ -27,8 +27,8 @@ session_start();
 					<ul class="navbar-nav mr-auto">
 						<?php if(isset($_SESSION['user'])){?>
 						<a href="cms.php" class="nav-item active nav-link">CMS</a>
-						<?php } ?>
 						<a href="help.php" class="nav-item active nav-link">Help</a>
+            <?php } ?>
 						<?php if(isset($_SESSION['user'])){?>
 						<a class="nav-item active nav-link" href="logout.php">
 							Logout

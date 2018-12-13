@@ -25,6 +25,11 @@ include 'includes/db_register.php';
 			<input type="submit" name="register_btn" class="fadeIn eigth" value="Registreren">
 		</form>
 
+    <!-- Register -->
+      <div id="formFooter">
+        <a href="index.php" class="underlineHover">Login</a>
+      </div>
+
 	</div>
 </div>
 

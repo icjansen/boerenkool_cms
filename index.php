@@ -17,7 +17,7 @@ if(isset($_SESSION["user"])){
 			<!-- Icon -->
 			<div class="fadeIn first">
 				<img src="images/logo2.png" id="icon" alt="User Icon" />
-				<h1>Inloggen</h1>
+				<h1>Inloggen CMS</h1>
 			</div>
 
 			<!-- Login Form -->
@@ -27,10 +27,10 @@ if(isset($_SESSION["user"])){
 				<input type="submit" name="login_btn" class="fadeIn fourth" value="Log In">
 			</form>
 
-			<!-- Register -->
+			<!-- Register
 			<div id="formFooter">
 				<a href="register.php" class="underlineHover" href="#">Registreren</a>
-			</div>
+			</div>-->
 
 		</div>
 	</div>
