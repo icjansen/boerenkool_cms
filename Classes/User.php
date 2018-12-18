@@ -41,6 +41,9 @@ class User {
             $_SESSION['username'] = $user_row['username'];
             $_SESSION['first_name'] = $user_row['first_name'];
             $_SESSION['last_name'] = $user_row['last_name'];
+            if($user_row['admin'] == 1){
+              $_SESSION['admin'] = $user_row['admin'];
+            }
             return true;
         }
         return false;

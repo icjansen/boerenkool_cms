@@ -26,12 +26,7 @@ if(isset($_SESSION["user"])){
 				<input type="password" id="password" class="fadeIn third" name="login_password" placeholder="password">
 				<input type="submit" name="login_btn" class="fadeIn fourth" value="Log In">
 			</form>
-
-			<!-- Register
-			<div id="formFooter">
-				<a href="register.php" class="underlineHover" href="#">Registreren</a>
-			</div>-->
-
+    
 		</div>
 	</div>
 

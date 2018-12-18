@@ -35,10 +35,17 @@ session_start();
               <li><a class="nav-item active nav-link" href="logout.php">
                 Logout
               </a></li>
+
+              <!-- Register form for admins to add other users -->
+              <?php if(isset($_SESSION['admin'])){ ?>
+              <li><a href="register.php" class="nav item active nav-link">Registreren</a></li>
+              <?php } ?>
+
               <li><a id="welkom" class="nav item active nav-link"> 
                 Welkom, <?php echo $_SESSION['first_name'].' '.$_SESSION['last_name'];?>
               </a></li>
               <?php } ?>
+
             </ul>
             <form id="zoekbalk" action="#" method="post" class="form-inline my-2 mylg-0">
               <input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="Zoekopdracht.." aria-label="search">
