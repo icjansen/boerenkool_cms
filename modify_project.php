@@ -123,7 +123,7 @@ if(isset($_SESSION['user'])){
 ?>
   <!-- niet ingelogd, dus H1 + JS redirect naar index-->
   <h1> Je bent niet ingelogd! </h1>
-  <p> Je wordt over 3 seconden doorgestuurd naar de inlogpagina... </p>
+  <p> Je wordt over 5 seconden doorgestuurd naar de inlogpagina... </p>
   <script src="js/redirects.js"></script>
 
 <?php

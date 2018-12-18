@@ -3,7 +3,7 @@ include 'includes/config.php';
 include 'includes/header.php';
 include 'includes/db_register.php';
 
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['admin'])){
 
 ?>
 
@@ -36,8 +36,8 @@ if(isset($_SESSION['user'])){
   include 'includes/footer.php';
 ?>
   <!-- niet ingelogd, dus H1 + JS redirect naar index-->
-  <h1> Je bent niet ingelogd! </h1>
-  <p> Je wordt over 3 seconden doorgestuurd naar de inlogpagina... </p>
+  <h1> Je bent helaas geen admin, dus jij mag geen accounts maken :) </h1>
+  <p> Je wordt over 5 seconden doorgestuurd naar de inlogpagina... </p>
   <script src="js/redirects.js"></script>
 
 <?php
