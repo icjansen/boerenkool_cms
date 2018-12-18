@@ -18,19 +18,19 @@ if(isset($_SESSION['user'])){
 				<form method="post" action="" enctype='multipart/form-data'>
 					<div class="col-md-9">
 						<div class="form-group">
-							<input type="text" name="project_name" class="form-control" placeholder="Project name" value="" />
+							<input type="text" name="project_name" class="form-control" placeholder="Project name"/>
 						</div>
 						<div class="form-group">
-							<input type="text" name="project_desc" class="form-control" placeholder="Description" value="" />
+							<input type="text" name="project_desc" class="form-control" placeholder="Description"/>
 						</div>
 						<div class="form-group">
-							<input type="date" name="project_year" class="form-control" value="" />
+							<input type="date" name="project_year" class="form-control"/>
 						</div>
 						<div class="form-group">
-							<input type="text" name="student_name" class="form-control" placeholder="Student name" value="" />
+							<input type="text" name="student_name" class="form-control" placeholder="Student name"/>
 						</div>
 						<div class="form-group">
-							<input type="text" name="download_link" class="form-control" placeholder="Download link" value="" />
+							<input type="text" name="download_link" class="form-control" placeholder="Download link"/>
             </div>
             <!-- Course -->
 						<div class="form-group">
@@ -39,7 +39,7 @@ if(isset($_SESSION['user'])){
 								<?php
 								while($row_course=mysqli_fetch_array($result_course)){
 									echo '<option value="'
-									.$row_course['course_name'].'">';
+									.$row_course['course_name'].'"></option>';
                 }
 								
 								?>
@@ -52,7 +52,7 @@ if(isset($_SESSION['user'])){
                 <?php
                 while($row_type=mysqli_fetch_array($result_type)){
                   echo '<option value="'
-                  .$row_type['type_name'].'">';
+                  .$row_type['type_name'].'"></option>';
                 }
                 
                 ?>
@@ -65,8 +65,7 @@ if(isset($_SESSION['user'])){
                 <?php
                 while($row_study=mysqli_fetch_array($result_study)){
                   echo '<option value="'
-                  .$row_study['project_id'].'">'
-                  .$row_study['study_name'].'</option>';
+                  .$row_study['study_name'].'"></option>';
                 }
                 
                 ?>

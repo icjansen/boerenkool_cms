@@ -8,10 +8,17 @@ if(isset($_SESSION['user'])){
 <section id="main">
   <div class="container">
     <div class="row">
-     <?php include 'includes/sidebar.php'; ?>
       <div class="col-md-9">
         <div class="list-group">
-          <h1> Hier komt heel veel help te staan </h1>
+          <h2> Wat is dit allemaal? </h2>
+          <br>
+          <div id="helplijst">
+            <ul>
+              <li>1. Dit een CMS voor de opendag van de opleidingen Applicatieontwikkeling en Gamedeveloper</li>
+              <li>2. Je kan hier projecten toevoegen met informatie en een thumbnail</li>
+              <li>3. Je kan bestaande projecten aanpassen en hier ook slideshow foto's toevoegen</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

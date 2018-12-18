@@ -35,12 +35,12 @@ session_start();
               <li><a class="nav-item active nav-link" href="logout.php">
                 Logout
               </a></li>
-              <li><a id="logout" class="nav item active nav-link"> 
+              <li><a id="welkom" class="nav item active nav-link"> 
                 Welkom, <?php echo $_SESSION['first_name'].' '.$_SESSION['last_name'];?>
               </a></li>
               <?php } ?>
             </ul>
-            <form action="#" method="post" class="form-inline my-2 mylg-0">
+            <form id="zoekbalk" action="#" method="post" class="form-inline my-2 mylg-0">
               <input type="search" name="search" id="search" class="form-control mr-sm-2" placeholder="Zoekopdracht.." aria-label="search">
               <button class="btn btn-success" type="submit">Zoeken</button>
             </form>

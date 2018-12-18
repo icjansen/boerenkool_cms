@@ -12,7 +12,7 @@ if(isset($_SESSION['user'])){
 			<div class="col-md-9">
 				<div class="list-group">
         		  <h1> Dit is het CMS voor de open dag van MBO Aventus </h1>
-        		  <img class="logo" src="images/aventus5.jpg"/>
+        		  <img id="cmslogo" class="logo" src="images/aventus5.jpg"/>
         		  <br>
         		  <h5> Dit betreft de opleidingen: Applicatie- en mediaontwikkelaar en gamedeveloper </h5>
 				</div>
